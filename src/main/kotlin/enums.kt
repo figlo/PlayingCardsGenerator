@@ -25,5 +25,5 @@ enum class CardSuit(val abbr: Char, val hexColor: String, val value: String) {
     SPADES('s', "#000000", "}"),         // black
     HEARTS('h', "#ff3322", "{"),         // red
     DIAMONDS('d', "#0051d8", "["),       // blue
-    CLUBS('c', "#35654d", "]");          // green
+    CLUBS('c', "#119251", "]");          // green (original green: #35654d
 }
