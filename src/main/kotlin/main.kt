@@ -6,8 +6,8 @@ import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
-const val PATH = "C:\\Users\\Miro\\playing_cards\\"
-const val OUTPUT_PATH = PATH + "output\\"
+const val DIRECTORY_PATH = "C:\\Users\\Miro\\playing_cards\\"
+const val OUTPUT_DIRECTORY_PATH = "C:\\Users\\Miro\\playing_cards\\output\\"
 
 const val TEMPLATE_FILE = "template.png"
 
@@ -31,7 +31,7 @@ fun main() {
         val suitColor = Color.decode(cardSuit.hexColor)
 
         CardFace.values().forEach { cardFace ->
-            templateFile = File(PATH + TEMPLATE_FILE)
+            templateFile = File(DIRECTORY_PATH + TEMPLATE_FILE)
             image = ImageIO.read(templateFile)
 
             with(image.graphics) {
@@ -46,7 +46,7 @@ fun main() {
                 drawString(cardFace.value, CARD_POSITION_X, CARD_POSITION_Y)
             }
 
-            newFile = File(OUTPUT_PATH + "card_${cardFace.abbr}${cardSuit.abbr}.png")
+            newFile = File(OUTPUT_DIRECTORY_PATH + "card_${cardFace.abbr}${cardSuit.abbr}.png")
             ImageIO.write(image, "png", newFile)
         }
     }
