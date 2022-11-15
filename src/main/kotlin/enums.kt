@@ -1,4 +1,4 @@
-package PlayingCardsGenerator
+package playingCardsGenerator
 
 enum class CardFace(val abbr: Char, val value: String) {
     /*
